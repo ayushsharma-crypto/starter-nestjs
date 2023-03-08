@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { join } from "path";
+import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
-  }
+    getHtmlPath(): string {
+        return join(process.cwd(), "public", "index.html");
+    }
 }
